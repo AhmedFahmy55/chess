@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/player/MoveStatues.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/board/Move/pawnEnpassantAttackMove.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/board/Move/castleMove.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/pieces/Queen.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/board/Move/attackeMove.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/board/BoardUtils.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/player/WhitePlayer.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/player/MoveTranstion.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/GUI/GUI.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/GUI/BoardPane.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/pieces/pawn.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/board/tile.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/pieces/king.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/test/BoardTest.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/pieces/alliance.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/GUI/TilePane.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/pieces/knight.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/pieces/pieceType.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/board/Move/pawnMove.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/board/Move/move.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/pieces/piece.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/board/Move/pawnjump.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/board/Move/pawnAttackMove.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/board/Move/nullMove.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/board/Move/moveFactory.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/board/Move/kingSideCastleMove.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/board/builder.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/board/Move/normalMove.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/pieces/methods.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/board/Board.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/pieces/bishop.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/player/BlackPlayer.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/pieces/rook.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/player/Player.java</file>
+            <file>file:/C:/Users/Kizaro/Desktop/New%20folder/JavaApplication7/src/com/chess/engine/board/Move/QueenSideCastleMove.java</file>
+        </group>
+    </open-files>
+</project-private>
