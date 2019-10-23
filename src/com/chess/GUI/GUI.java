@@ -37,7 +37,7 @@ public class GUI extends Application {
         stage.show();
     }
      public static void BG_Music(){
-         String id="audio\\awaken.mp3";
+         String id="audio\\b_c_ending.mp3";
         
      Media b_c = new Media(Paths.get(id).toUri().toString());
         AudioClip mediaPlayer = new AudioClip(b_c.getSource());
