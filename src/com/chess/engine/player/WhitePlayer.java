@@ -1,8 +1,6 @@
 
 package com.chess.engine.player;
-
 import com.chess.engine.board.Board;
-import com.chess.engine.board.Move.QueenSideCastleMove;
 import com.chess.engine.board.Move.kingSideCastleMove;
 import com.chess.engine.board.Move.move;
 import com.chess.engine.board.tile;
@@ -15,6 +13,10 @@ import java.util.List;
 public class WhitePlayer extends Player {
     public WhitePlayer(final Board board, List<move> l, final List<move> o) {
         super(board, l, o);
+    }
+    @Override
+   public String toString(){
+    return "White Player";
     }
     @Override
     public List<piece> getActivePieces() {
@@ -37,17 +39,16 @@ public class WhitePlayer extends Player {
         final List<move>kingCastles=new ArrayList<>();
         final tile kingTile=this.board.getTile(60);
         if(!this.isInCheck() && kingTile.getPiece().isFristMove()){
-        if(!this.board.getTile(61).isFilled()&&!this.board.getTile(62).isFilled()){
+        if((!this.board.getTile(61).isFilled())&&(!this.board.getTile(62).isFilled())){
         final tile rookTile=this.board.getTile(63);
         if(rookTile.isFilled()&&rookTile.getPiece().isFristMove()){
-            if(Player.calculateAttackOnTile(61, oponantMoves).isEmpty()&&
-               Player.calculateAttackOnTile(62, oponantMoves).isEmpty()&&
-               rookTile.getPiece().getPiece_Type().isRook()){
+            if(true){
             kingCastles.add(new kingSideCastleMove(this.board,this.playerKing,62,
-            (rook)rookTile.getPiece(),rookTile.getTileCoordinate(),61));
+            (rook)rookTile.getPiece(),63,61));
             }
            }
           }
+        
         //Queen side castle
         if(!this.board.getTile(57).isFilled()&&!this.board.getTile(58).isFilled()&&
                 !this.board.getTile(59).isFilled()){
@@ -61,7 +62,7 @@ public class WhitePlayer extends Player {
             }
            }
         }
-}
+     }         
           return ImmutableList.copyOf(kingCastles);
  } 
 }

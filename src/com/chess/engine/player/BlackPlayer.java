@@ -19,7 +19,10 @@ public class BlackPlayer extends Player {
     public BlackPlayer(final Board board, List<move> l, final List<move> o ) {
         super(board, l, o);
     }
-
+      @Override
+   public String toString(){
+    return "Black Player";
+    }
     @Override
     public List<piece> getActivePieces() {
         return this.board.getBlackPieces();

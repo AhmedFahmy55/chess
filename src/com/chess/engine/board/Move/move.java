@@ -16,6 +16,11 @@ public abstract class move {
         this.movedPiece = movedPiece;
         this.destinyCoordinate = destinyCoordinate;
     }
+    public move(final Board board, int destinyCoordinate) {
+        this.board = board;
+        this.destinyCoordinate = destinyCoordinate;
+        this.movedPiece=null;
+    }
     public boolean isAttack(){
     return false;
     }
@@ -24,6 +29,9 @@ public abstract class move {
     }
     public piece getAttackedPiece(){
     return null;
+    }
+    public Board getBoard(){
+    return this.board;
     }
     @Override
     public boolean equals(Object other){
@@ -69,6 +77,13 @@ public abstract class move {
     int getCurrentCoordinate() {
 return this.movedPiece.getPostion();
         }
-   
+    public static move creatMove(final Board board, int currntPostion, int destinyPostion){
+    for(final move Move:board.getAllLegalMoves()){
+        if(Move.getCurrentCoordinate()==currntPostion&&Move.getDestinationCoordinate()==destinyPostion){
+        return Move;
+        }
+    }
+    return null_Move;
+    }
 }
 

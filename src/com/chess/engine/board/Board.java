@@ -8,7 +8,6 @@ import com.chess.engine.pieces.king;
 import com.chess.engine.pieces.knight;
 import com.chess.engine.pieces.pawn;
 import com.chess.engine.pieces.piece;
-import com.chess.engine.pieces.pieceType;
 import com.chess.engine.pieces.rook;
 import com.chess.engine.player.BlackPlayer;
 import com.chess.engine.player.Player;
@@ -17,7 +16,6 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Iterables;
 import java.util.ArrayList;
 import java.util.List;
-import static sun.audio.AudioPlayer.player;
 public class Board {
    private final List<tile> gameBoard;
        private final List<piece> activeBlack;
@@ -83,7 +81,7 @@ public class Board {
      private List<move>calculateLegalMoves(List<piece>pieces){
          List<move>legalMoves=new ArrayList<>();
         for(final piece Piece:pieces){
-        legalMoves.addAll(Piece.possibleMoves(this));
+        legalMoves.addAll(Piece.calculatePossibleMoves(this));
         }
         return ImmutableList.copyOf(legalMoves) ;
      }
@@ -106,13 +104,13 @@ return ImmutableList.copyOf(boardTiles);
  Builder.setPiece(new bishop(5,alliance.BLACK));
  Builder.setPiece(new knight(6,alliance.BLACK));
  Builder.setPiece(new rook(7,alliance.BLACK));
- Builder.setPiece(new pawn(8,alliance.BLACK));
+Builder.setPiece(new pawn(8,alliance.BLACK));
  Builder.setPiece(new pawn(9,alliance.BLACK));
  Builder.setPiece(new pawn(10,alliance.BLACK));
  Builder.setPiece(new pawn(11,alliance.BLACK));
  Builder.setPiece(new pawn(12,alliance.BLACK));
  Builder.setPiece(new pawn(13,alliance.BLACK));
- Builder.setPiece(new pawn(14,alliance.BLACK));
+Builder.setPiece(new pawn(14,alliance.BLACK));
  Builder.setPiece(new pawn(15,alliance.BLACK));
  //white pieces
   Builder.setPiece(new pawn(48,alliance.WHITE));
@@ -120,16 +118,16 @@ return ImmutableList.copyOf(boardTiles);
  Builder.setPiece(new pawn(50,alliance.WHITE));
  Builder.setPiece(new pawn(51,alliance.WHITE));
  Builder.setPiece(new pawn(52,alliance.WHITE));
- Builder.setPiece(new pawn(53,alliance.WHITE));
+  Builder.setPiece(new pawn(53,alliance.WHITE));
   Builder.setPiece(new pawn(54,alliance.WHITE));
  Builder.setPiece(new pawn(55,alliance.WHITE));
  Builder.setPiece(new rook(56,alliance.WHITE));
  Builder.setPiece(new knight(57,alliance.WHITE));
  Builder.setPiece(new bishop(58,alliance.WHITE));
  Builder.setPiece(new Queen(59,alliance.WHITE));
- Builder.setPiece(new king(60,alliance.WHITE));
+Builder.setPiece(new king(60,alliance.WHITE));
  Builder.setPiece(new bishop(61,alliance.WHITE));
- Builder.setPiece(new knight(62,alliance.WHITE));
+Builder.setPiece(new knight(62,alliance.WHITE));
  Builder.setPiece(new rook(63,alliance.WHITE));
  // next move maker
  Builder.setNextMoveMaker(alliance.WHITE);

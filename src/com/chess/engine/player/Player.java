@@ -10,7 +10,13 @@ import static com.chess.engine.pieces.pieceType.KING;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Iterables;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public abstract class Player {
     protected Board board;
@@ -18,20 +24,20 @@ public abstract class Player {
     protected List<move> legalMoves;
    protected boolean isInCheck;
 Player(Board board,List<move> l,List<move>o){
-this.board=board;
-this.legalMoves=l;
-this.playerKing=creatPlayerKing();
-this.isInCheck=!(calculateAttackOnTile(this.playerKing.getPostion(),o).isEmpty());
+  this.board=board;
+   this.legalMoves=l;
+   //this.legalMoves = Stream.of(l,calculateKingCastles(l,o)).flatMap(x -> x.stream()).collect(Collectors.toList());
+  this.playerKing=creatPlayerKing();
+  this.isInCheck=!(calculateAttackOnTile(this.playerKing.getPostion(),o).isEmpty());
 }
-
    private king creatPlayerKing(){
    for(final piece Piece:getActivePieces()){
        if(Piece.getPiece_Type()==KING){
            return (king)Piece;
        }
    }
-
-   throw new RuntimeException("board without king xD");
+      throw new RuntimeException("board without king xD");
+      
    }
 
      public abstract Player getOpponent();
@@ -45,7 +51,8 @@ this.isInCheck=!(calculateAttackOnTile(this.playerKing.getPostion(),o).isEmpty()
     public abstract alliance getAlliance();
     public abstract List<piece>getActivePieces();
     
-    protected static List<move> calculateAttackOnTile(final int piecePostion,final List<move>moves) {
+    protected static List<move> calculateAttackOnTile(final int piecePostion,final List<move>moves) {     
+        System.out.println("King position = "+ piecePostion + ", legalMoves = " + Arrays.toString(moves.stream().map((move t) -> t.getDestinationCoordinate()).toArray()));
         final List<move>attackMoves=new ArrayList<>();
     for(final move move:moves){
     if(piecePostion==move.getDestinationCoordinate()){
@@ -81,8 +88,8 @@ this.isInCheck=!(calculateAttackOnTile(this.playerKing.getPostion(),o).isEmpty()
             return new MoveTranstion(this.board,Move,MoveStatues.ILLEGAL_MOVE);
         }
         final Board transtionBoard=Move.excute();
-        final List<move>kingsAttacks=calculateAttackOnTile(transtionBoard.getCurrentPlayer()
-                .getOpponent().getPlayerKing().getPostion(),transtionBoard.getCurrentPlayer()
+        final List<move>kingsAttacks=calculateAttackOnTile(transtionBoard.getCurrentPlayer().
+                getOpponent().getPlayerKing().getPostion(),transtionBoard.getCurrentPlayer()
         .getLegalMoves());
         if(!kingsAttacks.isEmpty()){
         return new MoveTranstion(this.board,Move,MoveStatues.LEAVES_IN_CHECK);

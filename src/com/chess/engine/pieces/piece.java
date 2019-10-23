@@ -2,13 +2,8 @@
 package com.chess.engine.pieces;
 import com.chess.engine.board.Board;
 import com.chess.engine.board.Move.move;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.Collection;
 import java.util.Objects;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javafx.scene.image.Image;
 public abstract class piece {
     protected pieceType piece_Type;
      protected int piecePostion;
@@ -54,7 +49,7 @@ public abstract class piece {
     public final alliance getAlliance(){
     return this.pieceAlliance;
     }
-    public abstract Collection<move> possibleMoves(final Board board);
+    public abstract Collection<move> calculatePossibleMoves(final Board board);
 
     private int computeHashCode() {
      int hash = 7;

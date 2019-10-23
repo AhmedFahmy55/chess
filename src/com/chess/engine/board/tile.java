@@ -1,18 +1,10 @@
 
 package com.chess.engine.board;
 import com.chess.engine.pieces.piece;
-import java.util.HashMap;
-import java.util.Map;
+
 public abstract class tile {
     protected final int tileNumber ;
-     private static final Map<Integer,emptyTile>emptyTiles=creatPosibleEmptyT();
-    private static Map<Integer,emptyTile>creatPosibleEmptyT(){
-    final Map<Integer,emptyTile>empty_Tiles=new HashMap<>();
-    for(int i=0;i<64;i++){
-        empty_Tiles.put(i, new emptyTile(i));
-    }
-    return empty_Tiles ;
-    }
+    
     public int getTileCoordinate(){
     return this.tileNumber;
     }

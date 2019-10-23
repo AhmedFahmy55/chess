@@ -1,6 +1,7 @@
 
 package com.chess.engine.pieces;
 
+import com.chess.engine.board.methods;
 import com.chess.engine.player.BlackPlayer;
 import com.chess.engine.player.Player;
 import com.chess.engine.player.WhitePlayer;
@@ -28,6 +29,11 @@ public enum alliance {
         public Player choosePlayer(WhitePlayer whitePlayer, BlackPlayer blackPlayer) {
             return whitePlayer;
         }
+
+        @Override
+        public boolean isPawnPromotionTile(int x) {
+          return methods.INSTANCE.FIRST_ROW.get(x);
+        }
     },
    BLACK() {
         @Override
@@ -49,6 +55,11 @@ return false;
         public Player choosePlayer(WhitePlayer whitePlayer, BlackPlayer blackPlayer) {
         return blackPlayer;    
         }
+
+        @Override
+        public boolean isPawnPromotionTile(int x) {
+          return methods.INSTANCE.EIGHTH_ROW.get(x);
+        }
     };
    
 
@@ -61,5 +72,5 @@ return false;
         public abstract boolean isWhite();
 
     public abstract Player choosePlayer(WhitePlayer whitePlayer, BlackPlayer blackPlayer);
-
+    public abstract boolean isPawnPromotionTile(int x);
 }

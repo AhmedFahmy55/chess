@@ -24,7 +24,9 @@ public class pawnjump extends move{
         }
         final pawn pawnJump=(pawn)this.movedPiece.movePiece(this);
         Builder.setPiece(pawnJump);
+        /* to do en passant move
         Builder.setEnpassant(pawnJump);
+*/
         Builder.setNextMoveMaker(this.board.getCurrentPlayer().getOpponent().getAlliance());
     return Builder.build();
     }

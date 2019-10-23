@@ -11,7 +11,7 @@ import java.util.Map;
 public class builder {
     public Map<Integer,piece>boardConfig;
     alliance nextMoveMaker;
-     pawn enPassantPawn;
+     //pawn enPassantPawn;
     public builder(){
         this.boardConfig=new HashMap<>();
     }
@@ -26,9 +26,9 @@ public class builder {
     public Board build(){
     return new Board(this);
     }
-
+/*
     public void setEnpassant(pawn pawnJump) {
         this.enPassantPawn=pawnJump;
     }
-    
+    */
 }

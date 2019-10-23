@@ -8,7 +8,7 @@ import com.chess.engine.pieces.piece;
 public class nullMove extends move {
     
     public nullMove() {
-        super(null, null, -1);
+        super( null, -1);
     }
     @Override
     public Board excute(){
