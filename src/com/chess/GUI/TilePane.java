@@ -255,12 +255,12 @@ public class TilePane extends Pane {
     private void makeTileColor() {
         if(methods.INSTANCE.FIRST_ROW.get(tileID)||methods.INSTANCE.THIRD_ROW.get(tileID)||
                 methods.INSTANCE.FIFTH_ROW.get(tileID)||methods.INSTANCE.SEVENTH_ROW.get(tileID)){
-        setStyle(this.tileID % 2==0 ? "-fx-background-color: #FFFACD"
-                :"-fx-background-color: #723604");
+        setStyle(this.tileID % 2==0 ? "-fx-background-color: #fcd703"
+                :"-fx-background-color: #0335fc");
         }else if(methods.INSTANCE.SECOND_ROW.get(tileID)||methods.INSTANCE.FOURTH_ROW.get(tileID)||
                 methods.INSTANCE.SIXTH_ROW.get(tileID)||methods.INSTANCE.EIGHTH_ROW.get(tileID)){
-                setStyle(this.tileID % 2==0 ? "-fx-background-color: #723604"
-                        :"-fx-background-color: #FFFACD");
+                setStyle(this.tileID % 2==0 ? "-fx-background-color: #0335fc"
+                        :"-fx-background-color: #fcd703");
 
         }
         
