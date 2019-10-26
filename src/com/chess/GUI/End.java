@@ -27,10 +27,10 @@ public class End extends Application {
         }
         Button b1 = new Button("Exit");
         Button  b2 = new Button("New Game");
-        b1.setMaxSize(80, 80);
-          b2.setMaxSize(80, 80);
-        b1.setMinSize (80, 80);
-        b2.setMinSize(80, 80);
+        b1.setMaxSize(100, 100);
+          b2.setMaxSize(100, 100);
+        b1.setMinSize (100, 100);
+        b2.setMinSize(100, 100);
         Text t=new Text(50,50,winner+"Win");
         HBox pane=new HBox(20);
         pane.getChildren().add(t);
