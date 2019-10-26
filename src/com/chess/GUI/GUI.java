@@ -26,7 +26,7 @@ public class GUI extends Application {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
         }
-        stage.setTitle("league of chess");
+        stage.setTitle("league of legend of chess ");
         stage.setMinHeight(680);
         stage.setMinWidth(660);
         stage.setMaxHeight(680);
